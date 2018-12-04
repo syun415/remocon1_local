@@ -8,7 +8,30 @@ var server = app.listen(process.env.PORT || '3000', function(){
 });
 
 
-// 写真リストを取得するAPI
 app.get("/", function(req, res, next){
     res.send("!");
+});
+
+app.get("/", function(req, res, next){
+  res.send("!");
+});
+
+
+
+function connect(){
+
+}
+
+const io = require('socket.io-client');
+const socket = io('https://remopi.herokuapp.com/');
+
+console.log("1");
+socket.on('connect', () => {
+  console.log("2");
+    socket.emit("greeting", {"message":'send message.'});
+    socket.emit("messaging", {"message":'send message.'});
+    socket.on('messaged', (obj) => {
+        // io.emit('chat message', msg);
+        console.log("message:"+obj.message);
+    });
 });
