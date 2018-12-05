@@ -66,6 +66,9 @@ socket.on('connect', () => {
             case "tim4":
                 command ="irsend SEND_ONCE fan TIM4";
                 break;
+            case "swg":
+                command ="irsend SEND_ONCE fan SWG";
+                break;
         }
         if(command !=""){
             exec(command, (error, stdout, stderr) => {
