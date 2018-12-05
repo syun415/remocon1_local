@@ -69,11 +69,83 @@ socket.on('connect', () => {
             case "swg":
                 command ="irsend SEND_ONCE fan SWG";
                 break;
+            case "tpwr":
+                command ="irsend SEND_ONCE tv PWR";
+                break;
+            case "1ch":
+                command ="irsend SEND_ONCE tv 1CH";
+                break;
+            case "2ch":
+                command ="irsend SEND_ONCE tv 2CH";
+                break;
+            case "3ch":
+                command ="irsend SEND_ONCE tv 3CH";
+                break;
+            case "4ch":
+                command ="irsend SEND_ONCE tv 4CH";
+                break;
+            case "5ch":
+                command ="irsend SEND_ONCE tv 5CH";
+                break;
+            case "6ch":
+                command ="irsend SEND_ONCE tv 6CH";
+                break;
+            case "7ch":
+                command ="irsend SEND_ONCE tv 7CH";
+                break;
+            case "8ch":
+                command ="irsend SEND_ONCE tv 8CH";
+                break;
+            case "9ch":
+                command ="irsend SEND_ONCE tv 9CH";
+                break;
+            case "10ch":
+                command ="irsend SEND_ONCE tv 10CH";
+                break;
+            case "11ch":
+                command ="irsend SEND_ONCE tv 11CH";
+                break;
+            case "12ch":
+                command ="irsend SEND_ONCE tv 12CH";
+                break;
+            case "vup":
+                command ="irsend SEND_ONCE tv UP";
+                break;
+            case "vdown":
+                command ="irsend SEND_ONCE tv DOWN";
+                break;
+            case "fpwr-tim1":
+                command ="irsend SEND_ONCE fan PWR TIM1";
+                break;
+            case "fpwr-tim2":
+                command ="irsend SEND_ONCE fan PWR TIM2";
+                break;
+            case "fpwr-tim4":
+                command ="irsend SEND_ONCE fan PWR TIM4";
+                break;
+            case "fpwr-wlow":
+                command ="irsend SEND_ONCE fan PWR WLOW";
+                break;
+            case "fpwr-wmid":
+                command ="irsend SEND_ONCE fan PWR WMID";
+                break;
+            case "fpwr-whigh":
+                command ="irsend SEND_ONCE fan PWR WHIGH";
+                break;
+            case "wlow-tim1":
+                command ="irsend SEND_ONCE fan WLOW TIM1";
+                break;
+            case "wlow-tim2":
+                command ="irsend SEND_ONCE fan WLOW TIM2";
+                break;
+            case "wlow-tim4":
+                command ="irsend SEND_ONCE fan WLOW TIM4";
+                break;
         }
         if(command !=""){
             exec(command, (error, stdout, stderr) => {
                 if (error) {
-                    console.error('[ERROR] ${error}');
+                    //console.error('[ERROR] ${error}');
                     return;
                 }
                 //console.log(`stdout: ${stdout}`);
