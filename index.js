@@ -70,50 +70,60 @@ socket.on('connect', () => {
                 command ="irsend SEND_ONCE fan SWG";
                 break;
             case "tpwr":
-                command ="irsend SEND_ONCE tv PWR";
+                command ="irsend SEND_ONCE tv.conf PWR";
                 break;
-            case "1ch":
-                command ="irsend SEND_ONCE tv 1CH";
+            case "guide":
+                command ="irsend SEND_ONCE tv.conf GUIDE";
                 break;
-            case "2ch":
-                command ="irsend SEND_ONCE tv 2CH";
+            case "chg":
+                command ="irsend SEND_ONCE tv.conf CHG";
                 break;
-            case "3ch":
-                command ="irsend SEND_ONCE tv 3CH";
+            case "bgh":
+                command ="irsend SEND_ONCE tv.conf BGH";
                 break;
-            case "4ch":
-                command ="irsend SEND_ONCE tv 4CH";
+            case "1":
+                command ="irsend SEND_ONCE tv.conf 1";
                 break;
-            case "5ch":
-                command ="irsend SEND_ONCE tv 5CH";
+            case "2":
+                command ="irsend SEND_ONCE tv.conf 2";
                 break;
-            case "6ch":
-                command ="irsend SEND_ONCE tv 6CH";
+            case "3":
+                command ="irsend SEND_ONCE tv.conf 3";
                 break;
-            case "7ch":
-                command ="irsend SEND_ONCE tv 7CH";
+            case "4":
+                command ="irsend SEND_ONCE tv.conf 4";
                 break;
-            case "8ch":
-                command ="irsend SEND_ONCE tv 8CH";
+            case "5":
+                command ="irsend SEND_ONCE tv.conf 5";
                 break;
-            case "9ch":
-                command ="irsend SEND_ONCE tv 9CH";
+            case "6":
+                command ="irsend SEND_ONCE tv.conf 6";
                 break;
-            case "10ch":
-                command ="irsend SEND_ONCE tv 10CH";
+            case "7":
+                command ="irsend SEND_ONCE tv.conf 7";
                 break;
-            case "11ch":
-                command ="irsend SEND_ONCE tv 11CH";
+            case "8":
+                command ="irsend SEND_ONCE tv.conf 8";
                 break;
-            case "12ch":
-                command ="irsend SEND_ONCE tv 12CH";
+            case "9":
+                command ="irsend SEND_ONCE tv.conf 9";
                 break;
-            case "vup":
-                command ="irsend SEND_ONCE tv UP";
+            case "10":
+                command ="irsend SEND_ONCE tv.conf 10";
                 break;
-            case "vdown":
-                command ="irsend SEND_ONCE tv DOWN";
+            case "11":
+                command ="irsend SEND_ONCE tv.conf 11";
                 break;
+            case "12":
+                command ="irsend SEND_ONCE tv.conf 12";
+                break;
+            case "up":
+                command ="irsend SEND_ONCE tv.conf UP";
+                break;
+            case "down":
+                command ="irsend SEND_ONCE tv.conf DOWN";
+                break;
+            //ここから複数動作
             case "fpwr-tim1":
                 command ="irsend SEND_ONCE fan PWR TIM1";
                 break;
